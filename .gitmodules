@@ -1,0 +1,3 @@
+[submodule "src/px4_interface"]
+	path = src/px4_interface
+	url = https://github.com/xmu795/px4_interface.git

@@ -1,0 +1,15 @@
+digraph G {
+"odom_frame" -> "t265_pose_frame"[label=" Broadcaster: default_authority\nAverage rate: 200.338\nBuffer length: 5.046\nMost recent transform: 1754755593.073228\nOldest transform: 1754755588.026751\n"];
+"t265_link" -> "t265_fisheye1_frame"[label=" Broadcaster: default_authority\nAverage rate: 30.257\nBuffer length: 5.024\nMost recent transform: 1754755593.055929\nOldest transform: 1754755588.032221\n"];
+"t265_pose_frame" -> "t265_link"[label=" Broadcaster: default_authority\nAverage rate: 30.257\nBuffer length: 5.024\nMost recent transform: 1754755593.055929\nOldest transform: 1754755588.032221\n"];
+"t265_aligned_depth_to_fisheye1_frame" -> "t265_fisheye1_optical_frame"[label=" Broadcaster: default_authority\nAverage rate: 60.513\nBuffer length: 5.024\nMost recent transform: 1754755593.055929\nOldest transform: 1754755588.032221\n"];
+"t265_link" -> "t265_aligned_depth_to_fisheye1_frame"[label=" Broadcaster: default_authority\nAverage rate: 30.257\nBuffer length: 5.024\nMost recent transform: 1754755593.055929\nOldest transform: 1754755588.032221\n"];
+"t265_link" -> "t265_fisheye2_frame"[label=" Broadcaster: default_authority\nAverage rate: 30.257\nBuffer length: 5.024\nMost recent transform: 1754755593.055929\nOldest transform: 1754755588.032221\n"];
+"t265_fisheye2_frame" -> "t265_fisheye2_optical_frame"[label=" Broadcaster: default_authority\nAverage rate: 30.257\nBuffer length: 5.024\nMost recent transform: 1754755593.055929\nOldest transform: 1754755588.032221\n"];
+"t265_link" -> "base_link"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_link" -> "laser_link"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1754755593.103533"[ shape=plaintext ] ;
+}->"odom_frame";
+}
